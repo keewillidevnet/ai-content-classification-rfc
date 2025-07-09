@@ -23,7 +23,7 @@ A complete working implementation demonstrating:
 - ✅ Cryptographic integrity verification (SHA-256)
 - ✅ RFC-compliant metadata schema
 
-Problem Statement
+## Problem Statement
 With the proliferation of generative AI models producing vast amounts of synthetic content, it is increasingly difficult to ensure the quality and originality of training datasets for future AI systems. This phenomenon, commonly referred to as "model collapse" or "data poisoning," occurs when models are trained on outputs of other models, compounding errors and losing alignment with human-authored knowledge and intent.
 Solution Overview
 The proposed system provides:
