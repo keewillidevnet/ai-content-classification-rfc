@@ -15,7 +15,7 @@ This document specifies a classification and tagging system designed to identify
 ## Implementation
 Reference Implementation: ai-content-tagging-tools
 
-A complete working implementation demonstrating:
+## A complete working implementation demonstrating:
 - ✅ CLI tools for content tagging and validation
 - ✅ Web interface for drag-and-drop file processing
 - ✅ Express.js middleware for automatic header injection
@@ -25,9 +25,11 @@ A complete working implementation demonstrating:
 
 ## Problem Statement
 With the proliferation of generative AI models producing vast amounts of synthetic content, it is increasingly difficult to ensure the quality and originality of training datasets for future AI systems. This phenomenon, commonly referred to as "model collapse" or "data poisoning," occurs when models are trained on outputs of other models, compounding errors and losing alignment with human-authored knowledge and intent.
-Solution Overview
+
+## Solution Overview
 The proposed system provides:
-Core Metadata Schema
+
+## Core Metadata Schema
 
 Origin Classification: human, ai, or hybrid
 Provenance Tracking: Author, timestamp, creation tools
