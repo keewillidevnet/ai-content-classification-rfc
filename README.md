@@ -79,7 +79,9 @@ Automated Tagging: Express.js middleware for web responses
 Content Management: Systematic tracking of content origins
 API Integration: Programmatic content classification
 
-Repository Structure
+## Repository Structure
+
+```
 ai-content-classification-rfc/
 ├── README.md                           # This document
 ├── draft-williams-ai-content-tagging-00.txt  # Official Internet-Draft
@@ -90,6 +92,7 @@ ai-content-classification-rfc/
 ├── changelog.md                        # Document revision history
 └── submission/
     └── datatracker-ready/             # IETF submission materials
+```
 
 Key Features
 Professional Standards Compliance
