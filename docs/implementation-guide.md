@@ -176,7 +176,7 @@ print("Valid:", metadata.validate())
 print("XML:", metadata.to_xml())
 ```
 
-## 🔍 Validation and Verification
+## Validation and Verification
 
 ### Content Integrity Verification
 
