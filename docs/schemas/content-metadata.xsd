@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/ai-content-classification"
+           xmlns:tns="http://example.com/ai-content-classification"
+           elementFormDefault="qualified"
+           version="1.0">
+
+  <!-- 
+    AI Content Classification RFC - XML Schema Definition
+    ==================================================
+    
+    This XML Schema defines the structure and validation rules for
+    AI content classification metadata according to RFC standards.
+    
+    Purpose:
+    - Validates XML sidecar files (.meta.xml)
+    - Ensures RFC compliance and data integrity
+    - Provides structure for automated validation tools
+    - Supports interoperability between implementations
+    
+    Author: AI Content Classification RFC Working Group
+    License: MIT
+    RFC Version: draft-williams-ai-content-tagging-00
+  -->
+
+  <xs:annotation>
+    <xs:documentation>
+      XML Schema for AI Content Classification metadata files.
+      This schema validates the structure of .meta.xml sidecar files
+      used to classify and track the provenance of digital content.
+    </xs:documentation>
+  </xs:annotation>
+
+  <!-- Root element definition -->
+  <xs:element name="content_metadata" type="tns:ContentMetadataType">
+    <xs:annotation>
+      <xs:documentation>
+        Root element containing all classification metadata for a piece of content.
+        This element represents a complete metadata record following RFC standards.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <!-- Main content metadata type -->
+  <xs:complexType name="ContentMetadataType">
+    <xs:annotation>
+      <xs:documentation>
+        Complete metadata structure for content classification.
+        Contains all required and optional fields as defined in the RFC.
+      </xs:documentation>
+    </xs:annotation>
+    
+    <xs:sequence>
+      <!-- Required Core Fields -->
+      <xs:element name="origin" type="tns:OriginType">
+        <xs:annotation>
+          <xs:documentation>
+            Content origin classification: human, ai, or hybrid.
+            This field is required and determines the primary classification.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="author" type="tns:AuthorType">
+        <xs:annotation>
+          <xs:documentation>
+            Content author or creator identification.
+            May be a person, organization, or system identifier.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="timestamp" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>
+            Content creation timestamp in ISO 8601 format (UTC).
+            Example: 2025-07-09T15:30:00Z
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="content_hash" type="tns:HashType">
+        <xs:annotation>
+          <xs:documentation>
+            SHA-256 hash of the content for integrity verification.
+            Must be exactly 64 hexadecimal characters.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="hash_algorithm" type="tns:HashAlgorithmType">
+        <xs:annotation>
+          <xs:documentation>
+            Hash algorithm used for content verification.
+            Currently only SHA-256 is supported.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="rfc_version" type="tns:RfcVersionType">
+        <xs:annotation>
+          <xs:documentation>
+            RFC specification version used for this metadata.
+            Ensures compatibility and proper interpretation.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <!-- Optional Descriptive Fields -->
+      <xs:element name="creation_tool" type="tns:CreationToolType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Tool, software, or system used to create the content.
+            Examples: "GPT-4", "Microsoft Word 2021", "Custom Script v1.2"
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="license" type="tns:LicenseType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            License or usage terms for the content.
+            Examples: "MIT", "CC BY 4.0", "Proprietary", "Public Domain"
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="description" type="tns:DescriptionType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Human-readable description of the content or its purpose.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="keywords" type="tns:KeywordsType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Comma-separated list of keywords or tags.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <!-- Optional Technical Fields -->
+      <xs:element name="content_length" type="xs:nonNegativeInteger" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Length of the content in bytes or characters.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="content_type" type="tns:ContentTypeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            MIME type or format of the content.
+            Examples: "text/plain", "text/html", "application/pdf"
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="language" type="tns:LanguageType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Content language using ISO 639-1 codes.
+            Examples: "en", "es", "fr", "de"
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <!-- Optional Provenance Fields -->
+      <xs:element name="parent_hash" type="tns:HashType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Hash of parent or source content for derived works.
+            Links this content to its source material.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="derivation_method" type="tns:DerivationMethodType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Method used to derive content from source material.
+            Examples: "manual_editing", "ai_translation", "summarization"
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <!-- Optional Quality Fields -->
+      <xs:element name="confidence_score" type="tns:ConfidenceScoreType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Confidence score for the classification (0.0 to 1.0).
+            Higher values indicate greater confidence in the classification.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <xs:element name="review_status" type="tns:ReviewStatusType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Human review status of the classification.
+            Values: "unreviewed", "reviewed", "verified", "disputed"
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      
+      <!-- Extension point for custom metadata -->
+      <xs:element name="custom_metadata" type="tns:CustomMetadataType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            Container for implementation-specific custom metadata fields.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    
+    <!-- Attributes -->
+    <xs:attribute name="version" type="xs:decimal" use="required" fixed="1.0">
+      <xs:annotation>
+        <xs:documentation>
+          Metadata schema version. Currently fixed at 1.0.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="xmlns" type="xs:anyURI" use="optional" fixed="http://example.com/ai-content-classification">
+      <xs:annotation>
+        <xs:documentation>
+          XML namespace for content classification metadata.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <!-- Origin type definition -->
+  <xs:simpleType name="OriginType">
+    <xs:annotation>
+      <xs:documentation>
+        Content origin classification values as defined in the RFC.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="human">
+        <xs:annotation>
+          <xs:documentation>Content created entirely by humans</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ai">
+        <xs:annotation>
+          <xs:documentation>Content generated entirely by AI systems</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="hybrid">
+        <xs:annotation>
+          <xs:documentation>Content created through human-AI collaboration</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Author type definition -->
+  <xs:simpleType name="AuthorType">
+    <xs:annotation>
+      <xs:documentation>
+        Author identification with length constraints.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="255"/>
+      <xs:pattern value="[^\n\r\t]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Hash type definition -->
+  <xs:simpleType name="HashType">
+    <xs:annotation>
+      <xs:documentation>
+        SHA-256 hash value (64 hexadecimal characters).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-fA-F0-9]{64}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Hash algorithm type definition -->
+  <xs:simpleType name="HashAlgorithmType">
+    <xs:annotation>
+      <xs:documentation>
+        Supported hash algorithms for content verification.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="sha256">
+        <xs:annotation>
+          <xs:documentation>SHA-256 hash algorithm</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- RFC version type definition -->
+  <xs:simpleType name="RfcVersionType">
+    <xs:annotation>
+      <xs:documentation>
+        RFC specification version identifier.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="draft-[a-zA-Z0-9\-]+-[0-9]{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Creation tool type definition -->
+  <xs:simpleType name="CreationToolType">
+    <xs:annotation>
+      <xs:documentation>
+        Tool or system used to create the content.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- License type definition -->
+  <xs:simpleType name="LicenseType">
+    <xs:annotation>
+      <xs:documentation>
+        License or usage terms for the content.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Description type definition -->
+  <xs:simpleType name="DescriptionType">
+    <xs:annotation>
+      <xs:documentation>
+        Human-readable description of the content.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="1000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Keywords type definition -->
+  <xs:simpleType name="KeywordsType">
+    <xs:annotation>
+      <xs:documentation>
+        Comma-separated list of keywords or tags.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="500"/>
+      <xs:pattern value="[^,]+(,[^,]+)*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Content type definition -->
+  <xs:simpleType name="ContentTypeType">
+    <xs:annotation>
+      <xs:documentation>
+        MIME type or format identifier for the content.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9][a-zA-Z0-9!#$&amp;\-\^_]*\/[a-zA-Z0-9][a-zA-Z0-9!#$&amp;\-\^_]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Language type definition -->
+  <xs:simpleType name="LanguageType">
+    <xs:annotation>
+      <xs:documentation>
+        Language code using ISO 639-1 standard.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z]{2}(-[A-Z]{2})?"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Derivation method type definition -->
+  <xs:simpleType name="DerivationMethodType">
+    <xs:annotation>
+      <xs:documentation>
+        Method used to derive content from source material.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="manual_editing"/>
+      <xs:enumeration value="ai_translation"/>
+      <xs:enumeration value="ai_summarization"/>
+      <xs:enumeration value="ai_expansion"/>
+      <xs:enumeration value="ai_rewriting"/>
+      <xs:enumeration value="format_conversion"/>
+      <xs:enumeration value="other"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Confidence score type definition -->
+  <xs:simpleType name="ConfidenceScoreType">
+    <xs:annotation>
+      <xs:documentation>
+        Confidence score for classification accuracy (0.0 to 1.0).
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0.0"/>
+      <xs:maxInclusive value="1.0"/>
+      <xs:fractionDigits value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Review status type definition -->
+  <xs:simpleType name="ReviewStatusType">
+    <xs:annotation>
+      <xs:documentation>
+        Human review status of the content classification.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="unreviewed">
+        <xs:annotation>
+          <xs:documentation>No human review has been performed</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="reviewed">
+        <xs:annotation>
+          <xs:documentation>Human review has been performed</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="verified">
+        <xs:annotation>
+          <xs:documentation>Classification has been verified as accurate</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="disputed">
+        <xs:annotation>
+          <xs:documentation>Classification accuracy is disputed</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Custom metadata type definition -->
+  <xs:complexType name="CustomMetadataType">
+    <xs:annotation>
+      <xs:documentation>
+        Container for implementation-specific custom metadata.
+        Allows extensions while maintaining schema compliance.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
