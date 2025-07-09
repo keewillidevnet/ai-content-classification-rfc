@@ -13,7 +13,7 @@ This document specifies a classification and tagging system designed to identify
 - **Category:** Standards Track
 
 ## Implementation
-Reference Implementation: ai-content-tagging-tools
+# Reference Implementation: ai-content-tagging-tools
 
 ## A complete working implementation demonstrating:
 - ✅ CLI tools for content tagging and validation
