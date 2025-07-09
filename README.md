@@ -1,7 +1,7 @@
 ## AI Content Classification and Tagging System
 IETF Internet-Draft: Classification and Tagging System for Digital Content to Preserve Clean Datasets for Machine Learning
 
-Abstract
+## Abstract
 This document specifies a classification and tagging system designed to identify and preserve the provenance of digital content (text, audio, video, and other media) to ensure the integrity of training datasets for machine learning systems. The framework described herein aims to support a standardized mechanism for tagging data with metadata that specifies whether the content was human-generated or AI-generated.
 
 ## Current Status
@@ -12,7 +12,7 @@ This document specifies a classification and tagging system designed to identify
 - **Author:** Keenan Williams
 - **Category:** Standards Track
 
-Implementation
+## Implementation
 Reference Implementation: ai-content-tagging-tools
 
 A complete working implementation demonstrating:
