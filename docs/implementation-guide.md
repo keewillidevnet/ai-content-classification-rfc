@@ -399,7 +399,7 @@ try {
 
 For implementation questions or issues:
 - **GitHub Issues:** [ai-content-classification-rfc/issues](https://github.com/keewillidevnet/ai-content-classification-rfc/issues)
-- **Email:** keenanwilliams@gmail.com
+- **Email:** Keenan W. at telesis001@icloud.com
 - **Documentation:** This guide and RFC specification
 
 ---
