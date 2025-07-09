@@ -2,11 +2,11 @@
 
 **IETF Internet-Draft: Classification and Tagging System for Digital Content to Preserve Clean Datasets for Machine Learning**
 
-## 🎯 Abstract
+## Abstract
 
 This document specifies a classification and tagging system designed to identify and preserve the provenance of digital content (text, audio, video, and other media) to ensure the integrity of training datasets for machine learning systems. The framework described herein aims to support a standardized mechanism for tagging data with metadata that specifies whether the content was human-generated or AI-generated.
 
-## 📋 Current Status
+## Current Status
 
 - **Document:** `draft-williams-ai-content-tagging-00`
 - **Status:** Internet-Draft (Work in Progress)
@@ -14,7 +14,7 @@ This document specifies a classification and tagging system designed to identify
 - **Author:** Keenan Williams
 - **Category:** Standards Track
 
-## 🚀 Implementation
+## Implementation
 
 **Reference Implementation:** [ai-content-tagging-tools](https://github.com/keewillidevnet/ai-content-tagging-tools)
 
@@ -26,11 +26,11 @@ A complete working implementation demonstrating:
 - ✅ Cryptographic integrity verification (SHA-256)
 - ✅ RFC-compliant metadata schema
 
-## 🎯 Problem Statement
+## Problem Statement
 
 With the proliferation of generative AI models producing vast amounts of synthetic content, it is increasingly difficult to ensure the quality and originality of training datasets for future AI systems. This phenomenon, commonly referred to as "model collapse" or "data poisoning," occurs when models are trained on outputs of other models, compounding errors and losing alignment with human-authored knowledge and intent.
 
-## 🛡️ Solution Overview
+## Solution Overview
 
 The proposed system provides:
 
@@ -51,7 +51,7 @@ The proposed system provides:
 - **Schema Compliance:** RFC specification validation
 - **Tamper Detection:** Identifies modified content
 
-## 📊 Implementation Status
+## Implementation Status
 
 | Component | Status | Description |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ The proposed system provides:
 | Audio ID3 Tags | 🚧 Planned | ID3v2 tag handling |
 | Image EXIF/XMP | 🚧 Planned | Image metadata embedding |
 
-## 🔬 Use Cases
+## Use Cases
 
 ### Machine Learning
 - **Dataset Curation:** Filter AI-generated content from training data
@@ -81,7 +81,7 @@ The proposed system provides:
 - **Content Management:** Systematic tracking of content origins
 - **API Integration:** Programmatic content classification
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 ai-content-classification-rfc/
@@ -96,7 +96,7 @@ ai-content-classification-rfc/
     └── datatracker-ready/             # IETF submission materials
 ```
 
-## 🎯 Key Features
+## Key Features
 
 ### Professional Standards Compliance
 - **RFC-compliant metadata** following IETF specifications
@@ -114,7 +114,7 @@ ai-content-classification-rfc/
 - **Command-line tools** for batch processing
 - **REST API examples** for integration
 
-## 🚀 Getting Started
+## Getting Started
 
 ### For Implementers
 1. **Review the specification:** [`draft-williams-ai-content-tagging-00.txt`](draft-williams-ai-content-tagging-00.txt)
@@ -131,7 +131,7 @@ ai-content-classification-rfc/
 2. **Automatic tagging:** All responses get RFC-compliant headers
 3. **Content verification:** Built-in integrity checking
 
-## 📊 Industry Impact
+## Industry Impact
 
 ### Addressing Critical Challenges
 - **$100B+ AI training market** needs clean datasets
@@ -144,7 +144,7 @@ ai-content-classification-rfc/
 - **Interoperable solution** across platforms and languages
 - **Foundation for future standards** in AI transparency
 
-## 🤝 Contributing
+## Contributing
 
 This Internet-Draft is open for community input:
 
@@ -153,20 +153,20 @@ This Internet-Draft is open for community input:
 3. **Submit improvements** via GitHub issues and pull requests
 4. **Participate in IETF discussions** (when submitted)
 
-## 📋 IETF Submission Status
+## IETF Submission Status
 
 - **Current Version:** `draft-williams-ai-content-tagging-00`
 - **Submission Status:** Preparing for IETF datatracker
 - **Target Working Group:** To be determined
 - **Feedback Period:** Open for community review
 
-## 📧 Contact
+## Contact
 
 **Author:** Keenan Williams  
 **Email:** keenanwilliams@gmail.com  
 **GitHub:** [@keewillidevnet](https://github.com/keewillidevnet)
 
-## 📜 License
+## License
 
 This document and reference implementation are available under the MIT License.
 
