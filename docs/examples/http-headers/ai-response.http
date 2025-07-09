@@ -1,0 +1,34 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 1543
+X-Content-Version: 1.0
+X-Content-Origin: ai
+X-Content-Author: MarketingAI Pro System
+X-Content-Timestamp: 2025-07-09T14:30:00Z
+X-Content-Checksum: b2c3d4e5f67890123456789012345678901abcdef2345678901abcdef234567
+X-Content-Toolchain: MarketingAI Pro v2.1
+X-Content-Model: marketing-gpt-v2.1
+X-Content-Metadata: version=1.0;origin=ai;author=MarketingAI%20Pro%20System;creation_timestamp=2025-07-09T14%3A30%3A00Z;checksum=b2c3d4e5f67890123456789012345678901abcdef2345678901abcdef234567;toolchain=MarketingAI%20Pro%20v2.1;model_identifier=marketing-gpt-v2.1
+Date: Tue, 09 Jul 2025 14:30:00 GMT
+Server: Express/4.18.2
+Connection: keep-alive
+
+{
+  "title": "Revolutionary AI-Powered Marketing Platform",
+  "content": {
+    "headline": "Transform Your Marketing Strategy with MarketingAI Pro",
+    "features": [
+      "Intelligent Customer Segmentation",
+      "Automated Content Generation", 
+      "Predictive Analytics Dashboard",
+      "Seamless Integration"
+    ],
+    "cta": "Ready to revolutionize your marketing strategy? Sign up for a free trial today!"
+  },
+  "metadata": {
+    "generated_by": "MarketingAI Pro v2.1",
+    "template": "Product Launch - SaaS Platform",
+    "generation_time": "2025-07-09T14:30:00Z",
+    "confidence_score": 0.94
+  }
+}
