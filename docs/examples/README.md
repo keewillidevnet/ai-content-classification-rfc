@@ -2,7 +2,7 @@
 
 This directory contains practical examples of the AI Content Classification and Tagging System in various formats and use cases.
 
-## 📁 Directory Structure
+##  Directory Structure
 
 ```
 examples/
@@ -30,7 +30,7 @@ examples/
     └── python-example.py      # Future Python implementation
 ```
 
-## 🎯 Usage Examples
+##  Usage Examples
 
 ### Human-Generated Content
 
@@ -54,7 +54,7 @@ examples/
 **Author:** `Content Team + DALL-E`
 **Toolchain:** `Human writing + DALL-E 3`
 
-## 📋 Format Examples
+##  Format Examples
 
 Each subdirectory contains working examples that demonstrate:
 - Proper metadata structure
@@ -62,7 +62,7 @@ Each subdirectory contains working examples that demonstrate:
 - Real-world use cases
 - Integration patterns
 
-## 🧪 Testing Examples
+##  Testing Examples
 
 All examples are designed to work with the reference implementation:
 
@@ -77,7 +77,7 @@ html-meta-tool extract -i examples/html-meta/human-article.html
 bash examples/batch-processing/dataset-tagging.sh
 ```
 
-## 🔗 Related Documentation
+##  Related Documentation
 
 - **RFC Specification:** [`draft-williams-ai-content-tagging-00.txt`](../../draft-williams-ai-content-tagging-00.txt)
 - **Implementation Guide:** [`implementation-guide.md`](../implementation-guide.md)
