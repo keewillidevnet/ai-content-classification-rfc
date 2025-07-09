@@ -8,7 +8,7 @@ This guide provides practical instructions for implementing the AI Content Class
 
 The AI Content Classification and Tagging System provides a standardized way to tag digital content with metadata that specifies whether content was human-generated, AI-generated, or hybrid. This implementation guide covers the core components and integration patterns.
 
-## 📋 Core Metadata Schema
+## Core Metadata Schema
 
 ### Required Fields
 
