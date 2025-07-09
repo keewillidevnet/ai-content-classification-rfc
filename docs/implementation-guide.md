@@ -4,7 +4,7 @@
 
 This guide provides practical instructions for implementing the AI Content Classification and Tagging System as specified in `draft-williams-ai-content-tagging-00.txt`.
 
-## 🎯 Overview
+## Overview
 
 The AI Content Classification and Tagging System provides a standardized way to tag digital content with metadata that specifies whether content was human-generated, AI-generated, or hybrid. This implementation guide covers the core components and integration patterns.
 
@@ -32,7 +32,7 @@ The AI Content Classification and Tagging System provides a standardized way to 
 }
 ```
 
-## 🔧 Implementation Approaches
+## Implementation Approaches
 
 ### 1. Sidecar Files (Recommended)
 
@@ -128,7 +128,7 @@ html-meta-tool extract -i page.html --verbose
 html-meta-tool batch -d ./website --origin human --author "Web Team"
 ```
 
-## 🛠️ Language-Specific Implementations
+## Language-Specific Implementations
 
 ### JavaScript/Node.js
 
@@ -205,7 +205,7 @@ if (validation.isValid) {
 }
 ```
 
-## 🚀 Integration Patterns
+## Integration Patterns
 
 ### ML Pipeline Integration
 
@@ -255,7 +255,7 @@ find ./dataset -name "*.txt" | while read file; do
 done
 ```
 
-## 📊 Performance Considerations
+## Performance Considerations
 
 ### Optimization Guidelines
 
@@ -283,7 +283,7 @@ function getCachedMetadata(content) {
 }
 ```
 
-## 🔒 Security Considerations
+## Security Considerations
 
 ### Digital Signatures (Planned)
 
@@ -304,7 +304,7 @@ function isTrustedSource(metadata) {
 }
 ```
 
-## 🧪 Testing and Validation
+## Testing and Validation
 
 ### Unit Tests
 
@@ -339,7 +339,7 @@ npm run demo-middleware
 curl -H "X-Content-Origin: human" http://localhost:3001/inspect
 ```
 
-## 📋 Compliance Checklist
+## Compliance Checklist
 
 ### RFC Compliance
 
@@ -357,7 +357,7 @@ curl -H "X-Content-Origin: human" http://localhost:3001/inspect
 - [ ] Logging and monitoring configured
 - [ ] Documentation complete
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -388,14 +388,14 @@ try {
 }
 ```
 
-## 📚 Additional Resources
+## Additional Resources
 
 - **RFC Specification:** [`draft-williams-ai-content-tagging-00.txt`](../draft-williams-ai-content-tagging-00.txt)
 - **Reference Implementation:** [ai-content-tagging-tools](https://github.com/keewillidevnet/ai-content-tagging-tools)
 - **Examples:** [Implementation Examples](examples/)
 - **Schemas:** [XML/JSON Schemas](schemas/)
 
-## 🤝 Support
+## Support
 
 For implementation questions or issues:
 - **GitHub Issues:** [ai-content-classification-rfc/issues](https://github.com/keewillidevnet/ai-content-classification-rfc/issues)
