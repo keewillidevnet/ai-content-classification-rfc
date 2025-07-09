@@ -1,0 +1,47 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 3421
+X-Content-Version: 1.0
+X-Content-Origin: hybrid
+X-Content-Author: Sarah Johnson + AI Assistant
+X-Content-Timestamp: 2025-07-09T16:15:00Z
+X-Content-Checksum: c3d4e5f678901234567890123456789012abcdef3456789012abcdef345678
+X-Content-License: CC-BY-4.0
+X-Content-Toolchain: GPT-4, DALL-E 3, Grammarly
+X-Content-Model: gpt-4-0613, dall-e-3
+X-Content-Metadata: version=1.0;origin=hybrid;author=Sarah%20Johnson%20%2B%20AI%20Assistant;creation_timestamp=2025-07-09T16%3A15%3A00Z;checksum=c3d4e5f678901234567890123456789012abcdef3456789012abcdef345678;license=CC-BY-4.0;toolchain=GPT-4%2C%20DALL-E%203%2C%20Grammarly;model_identifier=gpt-4-0613%2C%20dall-e-3
+Date: Tue, 09 Jul 2025 16:15:00 GMT
+Server: nginx/1.18.0
+Connection: keep-alive
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Future of AI Content Creation</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <article>
+        <h1>The Future of AI Content Creation</h1>
+        <p><em>Written by Sarah Johnson, Content Manager</em></p>
+        <p><em>AI-generated images and research assistance</em></p>
+        
+        <h2>Introduction</h2>
+        <p>The landscape of digital content creation is rapidly evolving, and artificial intelligence is playing an increasingly prominent role...</p>
+        
+        <h2>The Human-AI Collaboration Model</h2>
+        <p>In my experience, the most effective approach isn't replacing human creativity with AI, but rather creating a collaborative partnership...</p>
+        
+        <div class="ai-generated-image">
+            <img src="/images/ai-collaboration-diagram.png" alt="Human-AI Collaboration Workflow" />
+            <caption>Image generated using DALL-E 3 with human art direction</caption>
+        </div>
+        
+        <footer>
+            <p><strong>Author:</strong> Sarah Johnson, Content Manager</p>
+            <p><strong>AI Assistance:</strong> Research compilation, grammar checking, image generation</p>
+            <p><strong>Tools Used:</strong> GPT-4 for research, DALL-E 3 for images, Grammarly for editing</p>
+        </footer>
+    </article>
+</body>
+</html>
