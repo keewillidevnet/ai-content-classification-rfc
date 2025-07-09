@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <version>1.0</version>
+  <origin>hybrid</origin>
+  <author>Sarah Johnson + AI Assistant</author>
+  <creation_timestamp>2025-07-09T16:15:00Z</creation_timestamp>
+  <checksum>c3d4e5f678901234567890123456789012abcdef3456789012abcdef345678</checksum>
+  <license>CC-BY-4.0</license>
+  <toolchain>GPT-4, DALL-E 3, Grammarly</toolchain>
+  <model_identifier>gpt-4-0613, dall-e-3</model_identifier>
+</metadata>
