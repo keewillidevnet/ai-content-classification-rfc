@@ -1,0 +1,27 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 2847
+X-Content-Version: 1.0
+X-Content-Origin: human
+X-Content-Author: Dr. Jane Smith
+X-Content-Timestamp: 2025-07-09T12:00:00Z
+X-Content-Checksum: a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456
+X-Content-License: CC-BY-4.0
+X-Content-Metadata: version=1.0;origin=human;author=Dr.%20Jane%20Smith;creation_timestamp=2025-07-09T12%3A00%3A00Z;checksum=a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456;license=CC-BY-4.0
+Date: Tue, 09 Jul 2025 12:00:00 GMT
+Server: nginx/1.18.0
+Connection: keep-alive
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Academic Research Paper</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>AI Content Classification in Academic Publishing</h1>
+    <p>This paper presents a comprehensive analysis of AI-generated content detection...</p>
+    <p><strong>Authors:</strong> Dr. Jane Smith, Dr. Robert Johnson</p>
+    <p><strong>Institution:</strong> University Research Institute</p>
+</body>
+</html>
