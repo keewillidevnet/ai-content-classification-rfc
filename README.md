@@ -1,4 +1,4 @@
-## AI Content Classification and Tagging System
+# AI Content Classification and Tagging System
 IETF Internet-Draft: Classification and Tagging System for Digital Content to Preserve Clean Datasets for Machine Learning
 
 ## Abstract
