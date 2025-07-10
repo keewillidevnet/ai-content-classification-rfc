@@ -61,8 +61,8 @@ The proposed system provides:
 | HTML Meta Tags | ✅ Complete | Professional injection and extraction tool |
 | HTTP Headers | ✅ Complete | Express middleware and parsing |
 | Web Demo | ✅ Complete | Interactive demonstration tool |
-| Audio ID3 Tags | 🚧 Planned | ID3v2 tag handling |
-| Image EXIF/XMP | 🚧 Planned | Image metadata embedding |
+| Audio ID3 Tags | ✅ Complete | ID3v2 tag handling |
+| Image EXIF/XMP | ✅ Complete | Image metadata embedding |
 
 ## Use Cases
 
