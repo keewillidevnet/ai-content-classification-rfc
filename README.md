@@ -85,15 +85,15 @@ The proposed system provides:
 
 ```
 ai-content-classification-rfc/
-├── README.md                           # This document
+├── README.md                                 # This document
 ├── draft-williams-ai-content-tagging-00.txt  # Official Internet-Draft
 ├── docs/
-│   ├── implementation-guide.md         # Implementation guidelines
-│   ├── examples/                       # Usage examples
-│   └── schemas/                        # XML/JSON schemas
-├── changelog.md                        # Document revision history
+│   ├── implementation-guide.md               # Implementation guidelines
+│   ├── examples/                             # Usage examples
+│   └── schemas/                              # XML/JSON schemas
+├── changelog.md                              # Document revision history
 └── submission/
-    └── datatracker-ready/             # IETF submission materials
+    └── datatracker-ready/                    # IETF submission materials
 ```
 
 ## Key Features
